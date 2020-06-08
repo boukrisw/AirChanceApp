@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3d3d3D;" stylesheets="@app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Detail_Vol_Controller">
+   <children>
+      <Button fx:id="Modifier_Vol" layoutX="25.0" layoutY="259.0" mnemonicParsing="false" onAction="#Modifier_Vol_click" prefHeight="36.0" prefWidth="250.0" text="-2-Modifier vol" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <styleClass>
+            <String fx:value="record-sales" />
+            <String fx:value="record-blue" />
+         </styleClass>
+      </Button>
+      <Button fx:id="Fin_Vol" layoutX="25.0" layoutY="304.0" mnemonicParsing="false" onAction="#Fin_Vol_click" prefHeight="36.0" prefWidth="250.0" text="-4-Terminer vol" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <styleClass>
+            <String fx:value="record-sales" />
+            <String fx:value="record-blue" />
+         </styleClass>
+      </Button>
+      <Button fx:id="Supp_Vol" layoutX="290.0" layoutY="259.0" mnemonicParsing="false" onAction="#Supp_Vol_click" prefHeight="36.0" prefWidth="250.0" text="-3-Suppression vol" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <styleClass>
+            <String fx:value="record-sales" />
+            <String fx:value="record-blue" />
+         </styleClass>
+      </Button>
+      <Button fx:id="GPresonnel_Vol" layoutX="290.0" layoutY="304.0" mnemonicParsing="false" onAction="#GPresonnel_Vol_click" prefHeight="36.0" prefWidth="250.0" text="-5-Gestion personnel" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <styleClass>
+            <String fx:value="record-sales" />
+            <String fx:value="record-blue" />
+         </styleClass>
+      </Button>
+      <TextField fx:id="aeroOrigine" layoutX="290.0" layoutY="40.0" prefHeight="50.0" prefWidth="250.0" promptText="Aeropoart Origine" />
+      <TextField fx:id="numAvion" layoutX="25.0" layoutY="40.0" prefHeight="50.0" prefWidth="250.0" promptText="n° Avion" />
+      <TextField fx:id="aeroDestination" layoutX="290.0" layoutY="120.0" prefHeight="50.0" prefWidth="250.0" promptText="Aeroport Destination" />
+      <TextField fx:id="dateDepart" layoutX="25.0" layoutY="120.0" prefHeight="50.0" prefWidth="250.0" promptText="AAAA-MM-DD HH:MM:SS" />
+      <TextField fx:id="durree" layoutX="290.0" layoutY="200.0" prefHeight="50.0" prefWidth="250.0" promptText="Durree" />
+      <TextField fx:id="distance" layoutX="25.0" layoutY="200.0" prefHeight="50.0" prefWidth="250.0" promptText="Distance" />
+      <Button fx:id="quitter_btn" layoutX="537.0" layoutY="345.0" mnemonicParsing="false" onAction="#quitter_click" prefHeight="48.0" prefWidth="51.0" textAlignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <styleClass>
+            <String fx:value="record-sales" />
+            <String fx:value="record-blue" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Ressources/quit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="return_btn" layoutX="470.0" layoutY="345.0" mnemonicParsing="false" onAction="#return_click" prefHeight="48.0" prefWidth="51.0" textAlignment="CENTER">
+         <styleClass>
+            <String fx:value="record-sales" />
+            <String fx:value="record-blue" />
+         </styleClass>
+         <font>
+            <Font size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Ressources/return.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label alignment="CENTER" layoutX="25.0" layoutY="10.0" prefHeight="29.0" prefWidth="250.0" styleClass="text_police" text="n° Avion" textFill="#3a7ad6">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" spread="0.75" />
+         </effect>
+      </Label>
+      <Label alignment="CENTER" layoutX="290.0" layoutY="10.0" prefHeight="29.0" prefWidth="250.0" styleClass="text_police" text="Aeropoart Origine" textFill="#3a7ad6">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" spread="0.75" />
+         </effect>
+      </Label>
+      <Label alignment="CENTER" layoutX="290.0" layoutY="90.0" prefHeight="29.0" prefWidth="250.0" styleClass="text_police" text="Aeropoart Destination" textFill="#3a7ad6">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" spread="0.75" />
+         </effect>
+      </Label>
+      <Label alignment="CENTER" layoutX="25.0" layoutY="90.0" prefHeight="29.0" prefWidth="250.0" styleClass="text_police" text="Date Depart" textFill="#3a7ad6">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" spread="0.75" />
+         </effect>
+      </Label>
+      <Label alignment="CENTER" layoutX="287.0" layoutY="170.0" prefHeight="29.0" prefWidth="250.0" styleClass="text_police" text="Durree" textFill="#3a7ad6">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" spread="0.75" />
+         </effect>
+      </Label>
+      <Label alignment="CENTER" layoutX="25.0" layoutY="170.0" prefHeight="29.0" prefWidth="250.0" styleClass="text_police" text="Distance" textFill="#3a7ad6">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" spread="0.75" />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

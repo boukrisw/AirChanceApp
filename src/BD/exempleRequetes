@@ -1,0 +1,174 @@
+-----------------------LesModelAvions_Projet-------------------------------------------------
+
+select * from LesModelAvions_Projet;
+
+NUMMODEL             DISTANCEMAX   NBPILOTE    NBPLACE  NBHOTESSE
+-------------------- ----------- ---------- ---------- ----------
+Airbus A110                10000          3        250          5
+Airbus A320                10000          3        300          6
+Airbus A321                20000          3        250          5
+Airbus A325                30000          3        350          7
+Airbus A330                50000          5        500         10
+
+-----------------------LesAvions_Projet-------------------------------------------------
+
+_select * from LesAvions_Projet;
+
+  NUMAVION NUMMODEL             NBPLACESECO NBPLACESPREMIERE NBPLACESAFFAIRE
+---------- -------------------- ----------- ---------------- ---------------
+         1 Airbus A330                  300              100             100
+         2 Airbus A330                  400               75              25
+         3 Airbus A330                  300              150              50
+         4 Airbus A325                  200              100              50
+         5 Airbus A325                  200              125              25
+         6 Airbus A321                  150               50              50
+         7 Airbus A320                  150              100              50
+         8 Airbus A110                  100              100              50
+         9 Airbus A110                  150               50              50
+        10 Airbus A110                  150               75             250
+
+10 rows selected.
+
+-----------------------LesVols_Projet-------------------------------------------------
+select * from LesVols_Projet;
+
+
+NUMVO   NUMAVION AEROPORTORIGINE      AEROPORTDESTINATION  DATEDEPAR     DURREE
+----- ---------- -------------------- -------------------- --------- ----------
+  DISTANCE NBPLACEDISPOMIN NBPLACESECOMIN NBPLACESPREMIEREMIN NBPLACESAFFAIRE
+---------- --------------- -------------- ------------------- ---------------
+AABB1          1 ouarzazate           paris                18-JUL-12          3
+     10000             500            300                 100             100
+
+AABB2         10 casa                 lyon                 02-MAY-20          2
+      8000             250            150                  75              25
+
+AABB3          8 paris                lyon                 01-MAY-20          1
+      1000             250            100                 100              50
+
+
+
+-----------------------LesPilotes_Projet-------------------------------------------------
+
+select * from LesPilotes_Projet
+  2  ;
+
+NUMPERSONNEL PRENOM               NOM                  NBHEURETOTAL     NUMERO
+------------ -------------------- -------------------- ------------ ----------
+RUE                            CODEPOSTALE VILLE
+------------------------------ ----------- --------------------
+PAYS
+--------------------
+           1 jean                 Tapis                          52         10
+Avenue Victor Hugo                   34800 valence
+France
+
+           2 Mario                Balotteli                      40         35
+rue de la chapelle                   38000 grenoble
+France
+
+NUMPERSONNEL PRENOM               NOM                  NBHEURETOTAL     NUMERO
+------------ -------------------- -------------------- ------------ ----------
+RUE                            CODEPOSTALE VILLE
+------------------------------ ----------- --------------------
+PAYS
+--------------------
+
+           3 Pierre               Papin                         100          8
+rue de la piscine                    34800 SMH
+France
+
+
+-----------------------LesPilotesModel_Projet-------------------------------------------------
+select * from LesPilotesModel_Projet;
+
+NUMPERSONNEL NUMMODEL
+------------ --------------------
+           1 Airbus A325
+           2 Airbus A330
+           3 Airbus A110
+
+
+-----------------------LesHotesses_Projet-------------------------------------------------
+select * from LesHotesses_Projet;
+
+NUMPERSONNEL PRENOM               NOM                  NBHEURETOTAL     NUMERO
+------------ -------------------- -------------------- ------------ ----------
+RUE                            CODEPOSTALE VILLE
+------------------------------ ----------- --------------------
+PAYS
+--------------------
+           1 jamel                debbouze                       51          5
+Avenue Victor Hugo                   38000 Grenoble
+France
+
+           2 Maria                Carey                          65          8
+oxford street                        41000 atlanta
+US
+
+NUMPERSONNEL PRENOM               NOM                  NBHEURETOTAL     NUMERO
+------------ -------------------- -------------------- ------------ ----------
+RUE                            CODEPOSTALE VILLE
+------------------------------ ----------- --------------------
+PAYS
+--------------------
+
+           3 mathieu              canne                          59         13
+avenue latour                        26000 Valence
+France
+
+
+-----------------------LesHotesses_Projet-------------------------------------------------
+
+  select *from LesHotessesLangues_Projet;
+
+NUMPERSONNEL LANGUE
+------------ ----------
+           1 arabe
+           2 anglais
+           3 francais
+
+
+
+-----------------------LesPlaceAvions_Projet-------------------------------------------------
+
+ select * from LesPlaceAvions_Projet;
+
+  NUMPLACE   NUMAVION PLACEPOSIT TYPECLASSE       PRIX
+---------- ---------- ---------- ---------- ----------
+         1          1 hublot     premiere          100
+         2          8 centre     affaire            90
+         3         10 couloir    eco                62
+
+
+
+-----------------------LesReservation_Projet-------------------------------------------------
+
+select * from LesReservation_Projet;
+
+
+select * from LesVols_Projet 
+ORDER BY dateDepart ASC;
+
+NUMRESERVATION       PRIX DATERESER  NUMCLIENT     NUMVOL   NUMPLACE   NUMAVION
+-------------- ---------- --------- ---------- ---------- ---------- ----------
+             1        142 01-SEP-20          1          1          1          1
+             3        121 09-JAN-20          4          2          3         10
+             2        135 08-MAY-20          3          3          2          8
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------A Tester-----------------------------------------------
+
+
+SELECT numVol,numAvion FROM LesVols_Projet WHERE aeroportOrigine='zate' and aeroportDestination='paris' and dateDepart>TO_DATE('2020-05-01 22:00:00','YYYY-MM-DD HH24:MI:SS')

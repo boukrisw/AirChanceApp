@@ -1,0 +1,64 @@
+.record-sales {
+    -fx-font-family: 'EVER LOOSER UNTEXTURED';
+    -fx-font-size:21px;
+    -fx-padding:-10 0 0 0;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 10;
+    -fx-background-color:
+        linear-gradient(from 0% 93% to 0% 100%, #a31313 0%, #901212 100%),
+        #9d2424,
+        #d83a3a,
+        radial-gradient(center 50% 50%, radius 100%, #d83a3a, #c52c2c);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+}
+.record-sales:hover {
+    -fx-font-family: 'EVER LOOSER UNTEXTURED';
+    -fx-font-size:21px;
+    -fx-background-color:
+        linear-gradient(from 0% 93% to 0% 100%, #a31313 0%, #901212 100%),
+        #9d2424,
+        #d83a3a,
+        radial-gradient(center 50% 50%, radius 100%, #ea4b4b, #c52c2c);
+}
+.record-sales:pressed {
+    -fx-font-family: 'EVER LOOSER UNTEXTURED';
+    -fx-font-size:21px;
+    -fx-padding: -5 0 -2 0;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+
+.record-blue {
+    -fx-padding:-10 0 0 0;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 10;
+    -fx-background-color:
+        linear-gradient(from 0% 93% to 0% 100%, #147eb8 0%, #1786c2 100%),
+        #22a7f0,
+        #22a7f0,
+        radial-gradient(center 50% 50%, radius 100%, #22a7f0, #22a7f0);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+}
+
+
+.record-blue:hover {
+    -fx-background-color:
+        linear-gradient(from 0% 93% to 0% 100%, #147eb8 0%, #1786c2 100%),
+        #22a7f0,
+        #22a7f0,
+        radial-gradient(center 50% 50%, radius 100%, #22a7f0, #22a7f0);
+}
+
+
+.record-blue:pressed {
+    -fx-padding: -5 0 -2 0;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+@font-face{
+    src: url('../Ressources/EVER_LOOSER_UNTEXTURED.ttf');
+}
+
+.text_police{
+    -fx-font-family: 'EVER LOOSER UNTEXTURED'
+}

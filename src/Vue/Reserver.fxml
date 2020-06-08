@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3d3d3D;" stylesheets="@app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Reserver_Controller">
+   <children>
+      <VBox layoutX="25.0" layoutY="14.0" prefHeight="380.0" prefWidth="375.0" spacing="10.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="380.0" styleClass="text_police" text="Choix Places" textFill="#00b9ff">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" spread="0.75" />
+               </effect>
+            </Label>
+            <HBox prefHeight="330.0" prefWidth="375.0">
+               <children>
+                  <ListView fx:id="A" onMouseClicked="#A_click" prefHeight="262.0" prefWidth="160.0" />
+                  <ListView fx:id="B" onMouseClicked="#B_click" prefHeight="262.0" prefWidth="160.0" />
+                  <ListView fx:id="C" onMouseClicked="#C_click" prefHeight="262.0" prefWidth="160.0" />
+                  <ListView fx:id="D" onMouseClicked="#D_click" prefHeight="262.0" prefWidth="160.0" />
+                  <ListView fx:id="E" onMouseClicked="#E_click" prefHeight="262.0" prefWidth="160.0" />
+                  <ListView fx:id="F" onMouseClicked="#F_click" prefHeight="262.0" prefWidth="160.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button layoutX="414.0" layoutY="262.0" mnemonicParsing="false" onAction="#Supp_Cilck" prefHeight="40.0" prefWidth="160.0" styleClass="record-sales" text="Supprimer" />
+      <Button fx:id="confirmerbtn" layoutX="414.0" layoutY="346.0" mnemonicParsing="false" onAction="#Confirmer_Onlick" prefHeight="40.0" prefWidth="160.0" styleClass="record-blue" text="Confirmer" />
+      <ListView fx:id="listPlace" layoutX="414.0" layoutY="55.0" prefHeight="196.0" prefWidth="160.0" />
+      <Label alignment="CENTER" layoutX="423.0" layoutY="14.0" prefHeight="30.0" prefWidth="141.0" styleClass="text_police" text="Vos Places " textFill="#00b9ff">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" spread="0.75" />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3d3d3D;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LogIn_Controller">
+   <children>
+      <Label alignment="CENTER" layoutX="54.0" layoutY="-23.0" prefHeight="128.0" prefWidth="507.0" styleClass="text_police" text="Application Air Chance" textFill="#3a7ad6">
+         <font>
+            <Font size="60.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" spread="0.75" />
+         </effect>
+      </Label>
+      <Button fx:id="Register_Disable" layoutX="43.0" layoutY="70.0" mnemonicParsing="false" onAction="#Register_Disable_click" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-font-size: 40;" styleClass="record-sales" text="Sign Up" textAlignment="CENTER">
+         <font>
+            <Font size="35.0" />
+         </font>
+         <effect>
+            <DropShadow radius="10.2325" spread="0.7" width="21.93" />
+         </effect>
+      </Button>
+      <Button fx:id="Login_Disable" layoutX="308.0" layoutY="70.0" mnemonicParsing="false" onAction="#Login_Disable_click" prefHeight="52.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-font-size: 40;" styleClass="record-sales" text="Log In" textAlignment="CENTER">
+         <font>
+            <Font size="35.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="21.47" radius="8.0725" spread="0.92" width="12.82" />
+         </effect>
+      </Button>
+      <AnchorPane fx:id="PaneLogIn" cache="true" layoutX="192.0" layoutY="155.0" prefHeight="245.0" prefWidth="250.0">
+         <children>
+            <TextField fx:id="LogIn_prenom" prefHeight="50.0" prefWidth="250.0" promptText="prenom" />
+            <Button fx:id="Login_btn" layoutY="184.0" mnemonicParsing="false" onAction="#Login_click" prefHeight="52.0" prefWidth="250.0" text="Login" textAlignment="CENTER">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="record-sales" />
+                  <String fx:value="record-blue" />
+               </styleClass>
+            </Button>
+            <TextField fx:id="LogIn_nom" layoutY="55.0" prefHeight="50.0" prefWidth="250.0" promptText="nom" />
+            <TextField fx:id="LogIn_numPassport" layoutY="110.0" prefHeight="50.0" prefWidth="250.0" promptText="numero Passport" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PaneSignUp" layoutX="59.0" layoutY="155.0" prefHeight="245.0" prefWidth="468.0" visible="false">
+         <children>
+            <TextField fx:id="Register_prenom" prefHeight="50.0" prefWidth="162.0" promptText="prenom" />
+            <Button fx:id="Register_btn" layoutX="109.0" layoutY="185.0" mnemonicParsing="false" onAction="#Register_click" prefHeight="52.0" prefWidth="250.0" text="Register" textAlignment="CENTER">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="record-sales" />
+                  <String fx:value="record-blue" />
+               </styleClass>
+            </Button>
+            <TextField fx:id="Register_CodePostale" layoutX="187.0" layoutY="55.0" prefHeight="50.0" prefWidth="102.0" promptText="Code Postale" />
+            <TextField fx:id="Register_Rue" layoutX="261.0" prefHeight="50.0" prefWidth="196.0" promptText="Rue" />
+            <TextField fx:id="Register_NumAdresse" layoutX="187.0" prefHeight="50.0" prefWidth="51.0" promptText="N°" />
+            <TextField fx:id="Register_ville" layoutX="295.0" layoutY="55.0" prefHeight="50.0" prefWidth="162.0" promptText="Ville" />
+            <TextField fx:id="Register_pays" layoutX="187.0" layoutY="110.0" prefHeight="50.0" prefWidth="271.0" promptText="Pays" />
+            <TextField fx:id="Register_NumPassport" layoutY="110.0" prefHeight="50.0" prefWidth="162.0" promptText="numero Passport" />
+            <TextField fx:id="Register_nom" layoutY="55.0" prefHeight="50.0" prefWidth="162.0" promptText="nom" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="quitter_btn" layoutX="536.0" layoutY="334.0" mnemonicParsing="false" onAction="#quitter_click" prefHeight="52.0" prefWidth="51.0" textAlignment="CENTER">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <styleClass>
+            <String fx:value="record-sales" />
+            <String fx:value="record-blue" />
+         </styleClass>
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Ressources/quit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="return_btn" layoutX="476.0" layoutY="334.0" mnemonicParsing="false" onAction="#return_click" prefHeight="52.0" prefWidth="51.0" textAlignment="CENTER">
+         <styleClass>
+            <String fx:value="record-sales" />
+            <String fx:value="record-blue" />
+         </styleClass>
+         <font>
+            <Font size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Ressources/return.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

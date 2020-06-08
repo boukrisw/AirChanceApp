@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3d3d3D;" stylesheets="@app.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Gestion_Personnel_Controller">
+   <children>
+      <VBox layoutX="105.0" layoutY="30.0" prefHeight="260.0" prefWidth="160.0" spacing="10.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="160.0" styleClass="text_police" text="Pilotes" textFill="#00b9ff">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" spread="0.75" />
+               </effect>
+            </Label>
+            <HBox prefHeight="50.0" prefWidth="150.0" spacing="10.0">
+               <children>
+                  <ChoiceBox fx:id="choicePilotes" prefHeight="40.0" prefWidth="108.0" styleClass="record-blue" />
+                  <Button mnemonicParsing="false" onAction="#addPilote_Cilck" prefHeight="40.0" prefWidth="40.0" styleClass="record-blue" text="add" />
+               </children>
+            </HBox>
+            <ListView fx:id="listPilotes" prefHeight="138.0" prefWidth="122.0" />
+            <Button mnemonicParsing="false" onAction="#supprimePilote_Onlick" prefHeight="42.0" prefWidth="160.0" styleClass="record-blue" text="supprimer pilote" />
+         </children>
+      </VBox>
+      <VBox layoutX="355.0" layoutY="30.0" prefHeight="260.0" prefWidth="160.0" spacing="10.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="160.0" styleClass="text_police" text="Hotesses" textFill="#00b9ff">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" spread="0.75" />
+               </effect>
+            </Label>
+            <HBox prefHeight="50.0" prefWidth="150.0" spacing="10.0">
+               <children>
+                  <ChoiceBox fx:id="choiceHotesses" prefHeight="40.0" prefWidth="108.0" styleClass="record-blue" />
+                  <Button mnemonicParsing="false" onAction="#addHotesse_Cilck" prefHeight="40.0" prefWidth="40.0" styleClass="record-blue" text="add" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <ListView fx:id="listHotesses" prefHeight="138.0" prefWidth="122.0" />
+            <Button mnemonicParsing="false" onAction="#supprimeHotesse_Onlick" prefHeight="42.0" prefWidth="160.0" styleClass="record-blue" text="supprimer hotesse" />
+         </children>
+      </VBox>
+      <Label fx:id="erreurAjout" alignment="CENTER" layoutX="18.0" layoutY="300.0" prefHeight="96.0" prefWidth="568.0" styleClass="text_police" textFill="RED">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" spread="0.75" />
+         </effect>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="close" layoutX="546.0" layoutY="10.0" mnemonicParsing="false" onAction="#close_Cilck" prefHeight="40.0" prefWidth="40.0" styleClass="record-sales">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Ressources/close.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
